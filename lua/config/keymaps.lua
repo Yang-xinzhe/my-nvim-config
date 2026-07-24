@@ -42,3 +42,5 @@ vim.keymap.set({ "n", "t" }, "<C-Left>", resize_window("vertical resize -2"), { 
 vim.keymap.set({ "n", "t" }, "<C-Right>", resize_window("vertical resize +2"), { desc = "Increase Window Width" })
 vim.keymap.set({ "n", "t" }, "<C-Up>", resize_window("resize +2"), { desc = "Increase Window Height" })
 vim.keymap.set({ "n", "t" }, "<C-Down>", resize_window("resize -2"), { desc = "Decrease Window Height" })
+vim.keymap.set("x", "<Tab>", ">gv", { desc = "Indent Selection" })
+vim.keymap.set("x", "<S-Tab>", "<gv", { desc = "Unindent Selection" })

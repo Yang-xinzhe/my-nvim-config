@@ -68,6 +68,7 @@ vim.api.nvim_create_autocmd({ "BufEnter", "FileType" }, {
         apply_normal_buffer_options(event.buf)
     end,
 })
+apply_normal_buffer_options(vim.api.nvim_get_current_buf())
 
 vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
     group = vim.api.nvim_create_augroup("custom_local_config_autoformat", { clear = true }),
