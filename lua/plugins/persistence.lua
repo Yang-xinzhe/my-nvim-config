@@ -20,7 +20,7 @@ return {
                     end
 
                     vim.schedule(function()
-                        require("persistence").load({ last = true })
+                        require("persistence").load()
                     end)
                 end,
             })

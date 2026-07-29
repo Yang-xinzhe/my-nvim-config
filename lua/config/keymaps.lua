@@ -25,6 +25,9 @@ local function resize_window(cmd)
 end
 
 vim.keymap.set("n", "<C-p>", LazyVim.pick("files"), { desc = "Find Files (Root Dir)" })
+vim.keymap.set("n", "<C-f>", function()
+  Snacks.picker.lines({ pattern = vim.fn.expand("<cword>") })
+end, { desc = "Find in Current Buffer" })
 vim.keymap.set("n", "<leader>sg", LazyVim.pick("live_grep"), { desc = "Grep (Root Dir)" })
 vim.keymap.set("n", "<leader>sk", function()
   Snacks.picker.keymaps()
